@@ -89,6 +89,7 @@ mysqli_query($cons, '
     LOAD DATA LOCAL INFILE "'.$file.'"
         INTO TABLE '.$table.'
         FIELDS TERMINATED by \',\'
+	ENCLOSED by \'"\'
         LINES TERMINATED BY \'\n\'
 ')or die(mysql_error());
 
